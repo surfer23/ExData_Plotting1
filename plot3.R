@@ -22,12 +22,10 @@ png(filename = 'plot3.png', width = 480, height = 480, units='px')
 
 #Plot the data which will be added to the PNG
 with(data_sub, {
-  plot(Sub_metering_1~date_time, type="l", 
-       ylab="Energy sub metering", xlab="")
+  plot(Sub_metering_1~date_time, type="l",ylab="Energy sub metering", xlab="")
   lines(Sub_metering_2~date_time,col='Red')
   lines(Sub_metering_3~date_time,col='Blue')
-  legend("topright", col=c("black", "red", "blue"), lty=1, lwd=2, bty="n",
-         legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+  legend("topright", col=c("black", "red", "blue"), lty=1, lwd=2, bty="n",legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 })
 
 #Release the device
